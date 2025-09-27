@@ -21,9 +21,15 @@
                         {{ __('Usuario') }}
                     </x-nav-link>
                 </div>
+<<<<<<< HEAD
                                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('equipo.index') }}" :active="request()->routeIs('equipo.*')">
                         {{ __('Equipos') }}                                                                             
+=======
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('vehiculos.index') }}" :active="request()->routeIs('vehiculos.*')">
+                        {{ __('Vehiculos') }}
+>>>>>>> 0633b3863b0f0aad120dd9cd409f7c164054a7fb
                     </x-nav-link>
                 </div>
             </div>
