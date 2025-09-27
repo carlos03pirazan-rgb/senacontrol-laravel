@@ -3,10 +3,12 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Usuario\UsuarioController;
+use App\Http\Controllers\Equipo\EquipoController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::middleware([
     'auth:sanctum',
@@ -18,6 +20,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::resource('equipo', EquipoController::class)->names('equipo');
 
     // Rutas de usuario (index, create, store, edit, update, destroy, etc.)
     Route::resource('usuario', UsuarioController::class)->names('usuario');
